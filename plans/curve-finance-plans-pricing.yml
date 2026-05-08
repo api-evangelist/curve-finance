@@ -5,37 +5,55 @@ provider: Curve Finance
 providerId: curve-finance
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- Web3
-- DeFi
-- DEX
-- Stablecoins
-- AMM
-- Plans
-description: Placeholder plans/pricing artifact for Curve Finance. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+  - DeFi
+  - DEX
+  - Plans
+description: >-
+  Curve Finance is a decentralized protocol; the public REST API at api.curve.finance is free
+  and unauthenticated. There is no commercial subscription. Cost to use Curve at scale is the
+  on-chain gas and protocol fee per swap (paid on-chain), not a SaaS bill.
 sources:
-- https://curve.fi/
+  - https://docs.curve.finance/
+  - https://github.com/curvefi/curve-api
 plans:
-- id: curve-finance-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
-  entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
-    limit: -1
-    timeFrame: usage
-    geo: global
-    unit: 1
-    price: see https://curve.fi/
-    userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+  - id: curve-public
+    name: Public REST API (Free)
+    type: open
+    description: Free, unauthenticated public REST API used by the Curve UI and third parties.
+    entries:
+      - label: Subscription
+        name: public_subscription
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: No authentication
+      - name: Fair-use rate limit
+  - id: curve-onchain
+    name: On-chain (gas + protocol fee)
+    type: usage
+    description: Smart-contract usage charges the user on-chain gas and Curve protocol swap fee per trade.
+    entries:
+      - label: Per-swap protocol fee
+        name: swap_fee
+        type: usage
+        metric: trade
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: 0.04% typical (varies by pool)
+        userMultiplied: false
+    elements:
+      - name: Gas paid in chain native asset
+      - name: Protocol fee captured by veCRV holders
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

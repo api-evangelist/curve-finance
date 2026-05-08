@@ -1,23 +1,91 @@
 aid: curve-finance
 url: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml
 name: Curve Finance
-x-type: company
-description: >-
-  Curve Finance is a DeFi automated market maker (AMM) optimized for low-slippage swaps among stablecoins and pegged assets.
+x-type: protocol
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Web3
   - DeFi
   - DEX
-  - Stablecoins
   - AMM
+  - Stablecoins
+  - Pegged Assets
+  - Multi-chain
+  - Open Source
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+description: >-
+  Curve Finance is a DeFi automated market maker (AMM) optimized for low-slippage swaps among
+  stablecoins and pegged assets across multiple chains. Curve maintains a public read-only REST
+  API at api.curve.finance providing pool, gauge, factory, governance, lending, crvUSD, and TVL
+  data. Smart-contract entry points are the primary write path; the REST API is for indexing
+  and analytics.
+apis:
+  - aid: curve-finance:rest-api
+    name: Curve REST API
+    tags:
+      - Pools
+      - Gauges
+      - TVL
+      - Lending
+      - crvUSD
+      - Governance
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.curve.finance/api
+    humanURL: https://docs.curve.finance/curve-api/curve-api/
+    description: >-
+      Public read-only REST API used by the Curve UI and third parties. Endpoints cover
+      /getPools/all, /getSubgraphData, /getFactoryAPYs, /getLendingVaults, /getCrvUsdData, and
+      similar. JSON output. No authentication or rate limiting at the documented level.
+    properties:
+      - type: Documentation
+        url: https://docs.curve.finance/curve-api/curve-api/
+      - type: GitHub
+        url: https://github.com/curvefi/curve-api
+    x-features:
+      - Pool, gauge, factory, lending, crvUSD endpoints
+      - Multi-chain (Ethereum, Arbitrum, Optimism, Polygon, Avalanche, etc.)
+      - JSON read-only
+    x-use-cases:
+      - Indexing Curve liquidity for analytics
+      - Building Curve dashboards
+      - Pool APY calculators
+  - aid: curve-finance:smart-contracts
+    name: Curve Smart Contracts
+    tags:
+      - Smart Contracts
+      - On-chain
+      - Vyper
+      - Pools
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://etherscan.io/address/curve.fi
+    humanURL: https://docs.curve.finance/
+    description: Curve's primary surface for swaps and liquidity is a set of audited Vyper smart contracts deployed across multiple chains (StableSwap and CryptoSwap pools, factories, gauges, voting escrow, crvUSD, lending markets).
+    properties:
+      - type: Documentation
+        url: https://docs.curve.finance/
+      - type: GitHub
+        url: https://github.com/curvefi/curve-contract
+    x-features:
+      - StableSwap and CryptoSwap pools
+      - Factory pools and gauges
+      - veCRV voting escrow
+      - crvUSD stablecoin
+      - Lending markets
+    x-use-cases:
+      - On-chain swap execution
+      - Liquidity provisioning
+      - Governance voting
 common:
-  - type: Website
+  - type: Portal
     url: https://curve.fi/
+  - type: Documentation
+    url: https://docs.curve.finance/
+  - type: GitHub
+    url: https://github.com/curvefi
+  - type: Forum
+    url: https://gov.curve.finance/
   - type: Plans
     url: plans/curve-finance-plans-pricing.yml
   - type: RateLimits
