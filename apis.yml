@@ -1,0 +1,29 @@
+aid: curve-finance
+url: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml
+name: Curve Finance
+x-type: company
+description: >-
+  Curve Finance is a DeFi automated market maker (AMM) optimized for low-slippage swaps among stablecoins and pegged assets.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Web3
+  - DeFi
+  - DEX
+  - Stablecoins
+  - AMM
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://curve.fi/
+  - type: Plans
+    url: plans/curve-finance-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/curve-finance-rate-limits.yml
+  - type: FinOps
+    url: finops/curve-finance-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
