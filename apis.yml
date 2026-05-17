@@ -1,7 +1,7 @@
 aid: curve-finance
 url: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml
 name: Curve Finance
-x-type: protocol
+kind: protocol
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Web3
