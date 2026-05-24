@@ -92,6 +92,8 @@ common:
     url: rate-limits/curve-finance-rate-limits.yml
   - type: FinOps
     url: finops/curve-finance-finops.yml
+  - type: LLMsTxt
+    url: https://docs.curve.finance/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
