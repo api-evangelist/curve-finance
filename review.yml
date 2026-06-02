@@ -1,0 +1,116 @@
+aid: curve-finance
+name: Curve Finance
+review_type: websocket-availability
+question: Does Curve Finance expose a documented, first-party public WebSocket API?
+answer: No
+summary: |
+  Curve Finance is an on-chain decentralized automated market maker protocol.
+  Curve does not publish or host a first-party public WebSocket, Server-Sent
+  Events, or other streaming API. The documented developer surface consists of
+  (1) a read-only REST stats/indexer API at api.curve.finance over HTTPS,
+  (2) third-party GraphQL subgraphs hosted on The Graph, and (3) the underlying
+  Vyper smart contracts on Ethereum and other EVM chains, which are accessed
+  via standard JSON-RPC. Real-time access is not a property of Curve itself —
+  it is a property of the JSON-RPC node provider chosen by the developer
+  (eth_subscribe over a node provider's WebSocket) or, in some cases, of a
+  third-party subgraph host. Neither is a Curve-operated streaming endpoint.
+investigated_on: '2026-05-29'
+investigated_by: API Evangelist
+findings:
+  - name: Curve REST API is HTTPS request/response, not streaming
+    detail: |
+      The Curve API at api.curve.finance is documented as a read-only REST API
+      that returns JSON over HTTPS. Endpoints such as /getPools/all,
+      /getSubgraphData, /getFactoryAPYs, /getLendingVaults, and /getCrvUsdData
+      are documented request/response operations. No WebSocket, SSE, or
+      long-poll streaming endpoint is described in the Curve API documentation
+      or in the curvefi/curve-api source repository.
+    sources:
+      - https://docs.curve.finance/curve-api/curve-api/
+      - https://github.com/curvefi/curve-api
+      - https://api.curve.finance/api
+  - name: Curve subgraph access is GraphQL over HTTPS via The Graph
+    detail: |
+      Curve documents subgraph access through The Graph Network. These
+      subgraphs are GraphQL endpoints served by third-party indexing
+      infrastructure, not by Curve. GraphQL subscriptions over WebSocket are
+      not documented by Curve as a supported access pattern; the documented
+      usage is HTTPS POST queries against The Graph gateway.
+    sources:
+      - https://docs.curve.finance/
+      - https://thegraph.com/explorer
+  - name: Real-time on-chain data is via JSON-RPC, not a Curve WS endpoint
+    detail: |
+      Curve is on-chain. Real-time pool events (TokenExchange, AddLiquidity,
+      RemoveLiquidity, etc.) are surfaced by Ethereum and L2 nodes via the
+      standard JSON-RPC eth_subscribe method over a WebSocket connection.
+      That WebSocket connection is provided by the node operator the
+      developer chooses (self-hosted geth/reth/nethermind, Alchemy, Infura,
+      QuickNode, Ankr, etc.) — not by Curve. Curve does not operate a public
+      node WS endpoint for third-party developers.
+    sources:
+      - https://docs.curve.finance/
+      - https://docs.curve.finance/llms.txt
+  - name: crvUSD, lending, and gauge data are exposed via REST, not streaming
+    detail: |
+      crvUSD market data, lending vault data, and gauge data are exposed
+      through additional REST endpoints on api.curve.finance
+      (/getCrvUsdData, /getLendingVaults, gauge-related routes). These are
+      poll-based JSON endpoints. There is no documented push/subscribe
+      channel for crvUSD price, health-factor, liquidation, or gauge weight
+      updates from Curve itself.
+    sources:
+      - https://docs.curve.finance/curve-api/curve-api/
+      - https://github.com/curvefi/curve-api
+documented_apis:
+  - name: Curve REST API
+    protocol: REST/HTTPS
+    websocket: false
+    notes: |
+      First-party, public, read-only. No authentication and no documented
+      rate limiting at the published level. No WS, no SSE.
+  - name: Curve subgraphs
+    protocol: GraphQL over HTTPS (via The Graph)
+    websocket: false
+    notes: |
+      Third-party indexing infrastructure (The Graph). Curve does not
+      operate this endpoint. WebSocket GraphQL subscriptions are not part
+      of the documented access pattern.
+  - name: Curve smart contracts
+    protocol: EVM JSON-RPC
+    websocket: indirect
+    notes: |
+      Real-time on-chain events are obtained via eth_subscribe on a
+      JSON-RPC node provider's WebSocket endpoint. That WebSocket belongs
+      to the node provider, not to Curve.
+recommendations_for_realtime:
+  - Use a JSON-RPC node provider (Alchemy, Infura, QuickNode, Ankr,
+    self-hosted) and call eth_subscribe over its WebSocket endpoint to
+    receive Curve contract logs (StableSwap/CryptoSwap pools, factories,
+    gauges, crvUSD controllers, lending markets) in real time.
+  - For indexed/historical near-real-time data, evaluate The Graph subgraph
+    hosting. Note this is third-party infrastructure, not Curve.
+  - Do not represent a Curve real-time WebSocket as a first-party Curve API.
+    No such endpoint is documented by Curve.
+asyncapi_recommendation:
+  produce: false
+  reason: |
+    There is no first-party Curve-hosted WebSocket, SSE, or message-broker
+    endpoint to describe. An AsyncAPI specification would have to fabricate
+    channels, servers, and message schemas that Curve does not publish.
+    Generating one would misrepresent the actual API surface.
+sources_checked:
+  - url: https://curve.fi/
+    note: Application portal. No developer streaming surface advertised.
+  - url: https://docs.curve.finance/
+    note: Primary documentation site for Curve. References smart contracts, REST API, and subgraphs. No WebSocket/SSE/streaming endpoint mentioned.
+  - url: https://docs.curve.finance/curve-api/curve-api/
+    note: REST API reference. Documents read-only JSON endpoints over HTTPS. No streaming surface.
+  - url: https://docs.curve.finance/llms.txt
+    note: LLM-oriented index of the developer docs. References REST and on-chain contracts. No WebSocket/streaming/subscription endpoints.
+  - url: https://github.com/curvefi/curve-api
+    note: Source repository for the Curve REST API. Express-style HTTPS routes only. No WebSocket server or pub/sub implementation.
+  - url: https://github.com/curvefi
+    note: Curve organization on GitHub. Repositories cover contracts, UI, and the REST API. No first-party streaming/messaging service repository.
+  - url: https://gov.curve.finance/
+    note: Governance forum. Not a developer/API surface.
