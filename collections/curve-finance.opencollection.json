@@ -1,0 +1,695 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Gauges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getAllGauges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getAllGauges"
+          },
+          "docs": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Volumes and APYs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getAllPoolsVolume/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getAllPoolsVolume/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns total 24h volume for a chain."
+        },
+        {
+          "info": {
+            "name": "GET /getBaseApys/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getBaseApys/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all base APY data for Curve pools on each chain.\n\nNote: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoGaugesCrvRewards/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoGaugesCrvRewards/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns unboosted CRV APRs for sidechain facto gauges"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryAPYs/{blockchainId}/{version}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryAPYs/:blockchainId/:version",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for wh"
+        },
+        {
+          "info": {
+            "name": "GET /getSubgraphData/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getSubgraphData/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).\n"
+        },
+        {
+          "info": {
+            "name": "GET /getVolumes/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getVolumes/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.\n\nNote: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`\n"
+        },
+        {
+          "info": {
+            "name": "GET /getVolumes/ethereum/crvusd-amms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getVolumes/ethereum/crvusd-amms"
+          },
+          "docs": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "crvUSD",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getCrvCircSupply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvCircSupply"
+          },
+          "docs": "Returns the circulating supply of crvUSD"
+        },
+        {
+          "info": {
+            "name": "GET /getCrvusdTotalSupply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvusdTotalSupply"
+          },
+          "docs": "Returns the total supply of crvUSD"
+        },
+        {
+          "info": {
+            "name": "GET /getCrvusdTotalSupplyNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvusdTotalSupplyNumber"
+          },
+          "docs": "Returns the total supply of crvUSD as a number"
+        },
+        {
+          "info": {
+            "name": "GET /getScrvusdTotalSupplyNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getScrvusdTotalSupplyNumber"
+          },
+          "docs": "Returns the total supply of scrvUSD as a number"
+        },
+        {
+          "info": {
+            "name": "GET /getScrvusdTotalSupplyResult",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getScrvusdTotalSupplyResult"
+          },
+          "docs": "Returns the total supply of scrvUSD as a JSON object"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Deprecated",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getETHprice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getETHprice"
+          },
+          "docs": "Returns the current Ethereum USD price"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoGauges/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoGauges/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getAllGauges` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryCryptoPools/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryCryptoPools/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryPools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryPools"
+          },
+          "docs": "Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now\n<i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryTVL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryTVL"
+          },
+          "docs": "<i>Deprecated: please use `getPools/ethereum/factory` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryV2Pools/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryV2Pools/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainPoolsAPYs/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainPoolsAPYs/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf t"
+        },
+        {
+          "info": {
+            "name": "GET /getMainPoolsGaugeRewards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainPoolsGaugeRewards"
+          },
+          "docs": "Returns Ethereum main registry pools gauge rewards\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainRegistryPools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainRegistryPools"
+          },
+          "docs": "Returns Ethereum main registry pools addresses as an array\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainRegistryPoolsAndLpTokens",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainRegistryPoolsAndLpTokens"
+          },
+          "docs": "Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Misc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getGas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getGas"
+          },
+          "docs": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)"
+        },
+        {
+          "info": {
+            "name": "GET /getPlatforms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPlatforms"
+          },
+          "docs": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPointsCampaigns",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPointsCampaigns"
+          },
+          "docs": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n"
+        },
+        {
+          "info": {
+            "name": "GET /getRegistryAddress",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getRegistryAddress"
+          },
+          "docs": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getWeeklyFees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getWeeklyFees"
+          },
+          "docs": "Returns weekly fees"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Pools",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getHiddenPools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getHiddenPools"
+          },
+          "docs": "Returns a list of pool ids, grouped by chain id, that are known to be dysfunctional in some way. This list can be used by front-ends to avoid displaying these pools, and protect users from interacting with these pools."
+        },
+        {
+          "info": {
+            "name": "GET /getPoolList/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPoolList/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns addresses of all pools, in all registries, on a specific chain.\n\nNote: For backward compatibility, in this endpoint the \"factory\" registry is renamed to \"stable-factory\"\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/{blockchainId}/{registryId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/:blockchainId/:registryId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "registryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns information on all pools, in a specific registry, on a specific chain.\n\nNote:\n- Doesn't work for Harmony: its 3pool isn't in the main registry, and Harmony is lacking a crypto registry\n- Doesn't work for Moonbeam: it's lacking a main registry\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/all/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/all/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all pools, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/all"
+          },
+          "docs": "Returns all pools, in all registries, on all chains.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/big/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/big/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/big",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/big"
+          },
+          "docs": "Returns all pools whose TVL is ≥$10k, in all registries, on all chains.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/empty/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/empty/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all pools whose TVL is $0, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/empty",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/empty"
+          },
+          "docs": "Returns all pools whose TVL is $0, in all registries, on all chains.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/small/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/small/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all pools whose TVL is <$10k, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPools/small",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPools/small"
+          },
+          "docs": "Returns all pools whose TVL is <$10k, in all registries, on all chains.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Lending",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getLendingVaults/{lendingBlockchainId}/{lendingRegistryId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/:lendingBlockchainId/:lendingRegistryId",
+            "params": [
+              {
+                "name": "lendingBlockchainId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "lendingRegistryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getLendingVaults/all/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/all/:blockchainId",
+            "params": [
+              {
+                "name": "lendingBlockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all lending vaults, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getLendingVaults/all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/all"
+          },
+          "docs": "Returns all lending vaults, in all registries, on all chains.\n"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tokens",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getTokens/all/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getTokens/all/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

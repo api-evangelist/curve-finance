@@ -1,0 +1,3094 @@
+{
+  "item": [
+    {
+      "id": "572df7e5-9f40-4f55-ba14-4042be40f050",
+      "name": "Gauges",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9e840721-468a-4e1c-ac0d-46d9f590dc71",
+          "name": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+          "request": {
+            "name": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+            "description": {
+              "content": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getAllGauges"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac1cf4f5-105c-4f94-8dd1-d3867fa9064d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getAllGauges"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0a4b12e6-9dcb-47c5-9bfb-a30a93c19687",
+      "name": "Volumes and APYs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4eecc1fb-fb28-4b16-a151-440f74e2aa69",
+          "name": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+          "request": {
+            "name": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+            "description": {
+              "content": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getAllGauges"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "28bdda1c-6bf6-43df-bc39-73c07bebbc94",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getAllGauges"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f5833ba-0591-4252-9ed5-496385b3e219",
+          "name": "Returns total 24h volume for a chain.",
+          "request": {
+            "name": "Returns total 24h volume for a chain.",
+            "description": {
+              "content": "Returns total 24h volume for a chain.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getAllPoolsVolume",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ac269b8-e80f-4abb-8a75-5e0a5b5e9bce",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getAllPoolsVolume",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "36f6bc64-37b3-4ced-8144-fa65806868dd",
+          "name": "Returns all base APY data for Curve pools on each chain.\n\nNote: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred\n",
+          "request": {
+            "name": "Returns all base APY data for Curve pools on each chain.\n\nNote: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred\n",
+            "description": {
+              "content": "Returns all base APY data for Curve pools on each chain.\n\nNote: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getBaseApys",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "14d6b282-a7fe-4295-8bd3-93a77ef507bf",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getBaseApys",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b1a75c27-247f-41ab-8370-ee3d810def80",
+          "name": "Returns unboosted CRV APRs for sidechain facto gauges",
+          "request": {
+            "name": "Returns unboosted CRV APRs for sidechain facto gauges",
+            "description": {
+              "content": "Returns unboosted CRV APRs for sidechain facto gauges",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoGaugesCrvRewards",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b5c906f6-100b-4564-96bf-e3a291cf9e8f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoGaugesCrvRewards",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c693d836-8a4f-497d-b394-ad0c29954052",
+          "name": "Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n",
+          "request": {
+            "name": "Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n",
+            "description": {
+              "content": "Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoryAPYs",
+                ":blockchainId",
+                ":version"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "version",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2140628b-a701-404b-9014-133724d6b841",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoryAPYs",
+                    ":blockchainId",
+                    ":version"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "version",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6b9cc83b-a6f5-44a6-8c2e-24941594425a",
+          "name": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).\n",
+          "request": {
+            "name": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).\n",
+            "description": {
+              "content": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getSubgraphData",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4d35f80-68c0-4446-a347-ae0bce029f57",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getSubgraphData",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9f3af930-ca63-49b7-89d1-74b2351384d8",
+          "name": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.\n\nNote: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`\n",
+          "request": {
+            "name": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.\n\nNote: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`\n",
+            "description": {
+              "content": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.\n\nNote: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getVolumes",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aabe10e7-cb4a-430c-9e77-1607aacd1fec",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getVolumes",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d4ab6bb9-743a-46ca-b543-5f36585e7318",
+          "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+          "request": {
+            "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+            "description": {
+              "content": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getVolumes",
+                "ethereum",
+                "crvusd-amms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2295b649-2702-462f-898e-dfb9a188ee40",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getVolumes",
+                    "ethereum",
+                    "crvusd-amms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "aa368c45-c10f-4d3a-a976-82624d7e4962",
+      "name": "crvUSD",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1eddd222-d689-4f3d-a130-d1129a2dbcf0",
+          "name": "Returns the circulating supply of crvUSD",
+          "request": {
+            "name": "Returns the circulating supply of crvUSD",
+            "description": {
+              "content": "Returns the circulating supply of crvUSD",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvCircSupply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfcd6b87-9891-4ed1-b0ab-cd1e26a415f8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvCircSupply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ef6e875-39a2-4e8d-b839-a8d9c732a7a5",
+          "name": "Returns the total supply of crvUSD",
+          "request": {
+            "name": "Returns the total supply of crvUSD",
+            "description": {
+              "content": "Returns the total supply of crvUSD",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvusdTotalSupply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3e592640-6df3-4cab-9b23-8e29022fa7e5",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvusdTotalSupply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f401dc14-cb27-49e8-97e3-474b9744e602",
+          "name": "Returns the total supply of crvUSD as a number",
+          "request": {
+            "name": "Returns the total supply of crvUSD as a number",
+            "description": {
+              "content": "Returns the total supply of crvUSD as a number",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvusdTotalSupplyNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b7f8c037-6184-48e1-bede-f9c35b541e63",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvusdTotalSupplyNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8f5768d-7770-476c-a92f-402383ce2989",
+          "name": "Returns the total supply of scrvUSD as a number",
+          "request": {
+            "name": "Returns the total supply of scrvUSD as a number",
+            "description": {
+              "content": "Returns the total supply of scrvUSD as a number",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getScrvusdTotalSupplyNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "deb64507-ecb4-454a-9d50-03ef5562b66e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getScrvusdTotalSupplyNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7b41933c-6657-4bff-8fb6-2b5c34f6f58c",
+          "name": "Returns the total supply of scrvUSD as a JSON object",
+          "request": {
+            "name": "Returns the total supply of scrvUSD as a JSON object",
+            "description": {
+              "content": "Returns the total supply of scrvUSD as a JSON object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getScrvusdTotalSupplyResult"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "07d4d9a5-5a5f-4f93-b6bd-9839926963c8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getScrvusdTotalSupplyResult"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63476cbe-6152-4a5d-91b9-b70060f2f8ac",
+          "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+          "request": {
+            "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+            "description": {
+              "content": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getVolumes",
+                "ethereum",
+                "crvusd-amms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77fa298d-3317-4931-a8ea-62c65f250712",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getVolumes",
+                    "ethereum",
+                    "crvusd-amms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0f182753-1e5a-416c-80e6-935568efb5f3",
+      "name": "Deprecated",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2b85641b-3cbc-426e-996d-151aea1a4025",
+          "name": "Returns the current Ethereum USD price",
+          "request": {
+            "name": "Returns the current Ethereum USD price",
+            "description": {
+              "content": "Returns the current Ethereum USD price",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getETHprice"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6fbc0746-2c73-44c7-8813-7eb9facdfb7f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getETHprice"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cbd30c1c-bbb2-4f08-8b78-a6c2896bdb97",
+          "name": "<i>Deprecated: please use `getAllGauges` instead</i>\n",
+          "request": {
+            "name": "<i>Deprecated: please use `getAllGauges` instead</i>\n",
+            "description": {
+              "content": "<i>Deprecated: please use `getAllGauges` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoGauges",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c07d35c-050e-474c-9fba-3a77c203acab",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoGauges",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "180b8660-2454-4083-b18d-d59cc38f936b",
+          "name": "<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>\n",
+          "request": {
+            "name": "<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>\n",
+            "description": {
+              "content": "<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoryCryptoPools",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2086c194-c7b7-46d5-9b44-f205f9f97226",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoryCryptoPools",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5ade4a17-88e8-4ea6-82a9-4d24bfd37569",
+          "name": "Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now\n<i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>\n",
+          "request": {
+            "name": "Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now\n<i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>\n",
+            "description": {
+              "content": "Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now\n<i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoryPools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d070752d-856a-4811-8044-213630824703",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoryPools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5bc8799b-37c2-486b-8c46-2614979eba1f",
+          "name": "<i>Deprecated: please use `getPools/ethereum/factory` instead</i>\n",
+          "request": {
+            "name": "<i>Deprecated: please use `getPools/ethereum/factory` instead</i>\n",
+            "description": {
+              "content": "<i>Deprecated: please use `getPools/ethereum/factory` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoryTVL"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "07404dd2-5d31-482c-ace5-4a5b5a93fe91",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoryTVL"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f0d5d165-e732-4211-b482-bb7a5365204e",
+          "name": "<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>\n",
+          "request": {
+            "name": "<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>\n",
+            "description": {
+              "content": "<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getFactoryV2Pools",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "acd5e7c2-09be-49d8-97ee-f96a3279272d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getFactoryV2Pools",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "69221c02-11f0-4608-a302-033bcfef3d4b",
+          "name": "Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n\nNote: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.\n",
+          "request": {
+            "name": "Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n\nNote: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.\n",
+            "description": {
+              "content": "Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.\n\nNote: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getMainPoolsAPYs",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "37ceb2b7-9427-4409-b28f-73014fa5e7b7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getMainPoolsAPYs",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2567d6ea-ccd6-4177-a0f3-73ee52930d04",
+          "name": "Returns Ethereum main registry pools gauge rewards\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+          "request": {
+            "name": "Returns Ethereum main registry pools gauge rewards\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+            "description": {
+              "content": "Returns Ethereum main registry pools gauge rewards\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getMainPoolsGaugeRewards"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "928697b4-100c-4ee3-be46-271c82961fc7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getMainPoolsGaugeRewards"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e8926930-43c8-4ef7-bbb9-06810184f4de",
+          "name": "Returns Ethereum main registry pools addresses as an array\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+          "request": {
+            "name": "Returns Ethereum main registry pools addresses as an array\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+            "description": {
+              "content": "Returns Ethereum main registry pools addresses as an array\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getMainRegistryPools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "58b8d6b3-3c5d-43f1-ae86-3c4f310d88a2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getMainRegistryPools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cf5a970-2523-4c1a-a56d-6eeb0b72eb89",
+          "name": "Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+          "request": {
+            "name": "Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+            "description": {
+              "content": "Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getMainRegistryPoolsAndLpTokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5719bcb8-839c-4b27-a4b5-3390e17e8803",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getMainRegistryPoolsAndLpTokens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "de8fcec2-6df0-49f9-90a0-ea2bf71c063d",
+      "name": "Misc",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "875d423b-e8d8-4bce-adfd-70f29ee2d5f0",
+          "name": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+          "request": {
+            "name": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+            "description": {
+              "content": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getGas"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd3a573f-f5ce-4e00-886f-1a28a15508c2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3e57365-ba23-4eff-8519-f7006de26f68",
+          "name": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+          "request": {
+            "name": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+            "description": {
+              "content": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPlatforms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "72491c60-141d-4065-bb9f-d1d923296ba2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPlatforms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75c23e55-d633-4729-9159-bf8f71fbd969",
+          "name": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+          "request": {
+            "name": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+            "description": {
+              "content": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPointsCampaigns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7315330b-b657-49ae-81ee-83072852e846",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPointsCampaigns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4c3b5d87-0a59-4195-9fdf-b5a298d4cb44",
+          "name": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+          "request": {
+            "name": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+            "description": {
+              "content": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getRegistryAddress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d403870-58ca-4700-bf37-38906ccc14f0",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getRegistryAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "da65d462-fe69-407e-9c7a-66476a0dc604",
+          "name": "Returns weekly fees",
+          "request": {
+            "name": "Returns weekly fees",
+            "description": {
+              "content": "Returns weekly fees",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getWeeklyFees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29a0beee-aaa3-4c6f-9436-a3e90030d3df",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getWeeklyFees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a9a5397d-ad2c-43b3-8cfa-038046ed704d",
+      "name": "Pools",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2d45d3d5-a7df-4e42-b7d6-8460c641099d",
+          "name": "Returns a list of pool ids, grouped by chain id, that are known to be dysfunctional in some way. This list can be used by front-ends to avoid displaying these pools, and protect users from interacting with these pools.",
+          "request": {
+            "name": "Returns a list of pool ids, grouped by chain id, that are known to be dysfunctional in some way. This list can be used by front-ends to avoid displaying these pools, and protect users from interacting with these pools.",
+            "description": {
+              "content": "Returns a list of pool ids, grouped by chain id, that are known to be dysfunctional in some way. This list can be used by front-ends to avoid displaying these pools, and protect users from interacting with these pools.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getHiddenPools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d3a0284-6382-4ad9-9e2f-b1e71518ea61",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getHiddenPools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "38b0a98d-bbfb-4c33-b6eb-bfc9ca343a49",
+          "name": "Returns addresses of all pools, in all registries, on a specific chain.\n\nNote: For backward compatibility, in this endpoint the \"factory\" registry is renamed to \"stable-factory\"\n",
+          "request": {
+            "name": "Returns addresses of all pools, in all registries, on a specific chain.\n\nNote: For backward compatibility, in this endpoint the \"factory\" registry is renamed to \"stable-factory\"\n",
+            "description": {
+              "content": "Returns addresses of all pools, in all registries, on a specific chain.\n\nNote: For backward compatibility, in this endpoint the \"factory\" registry is renamed to \"stable-factory\"\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPoolList",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f575b338-6c03-4512-bf8f-fdeeb935b5de",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPoolList",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "10c2e454-3d6d-4a67-9667-f5f67b881c46",
+          "name": "Returns information on all pools, in a specific registry, on a specific chain.\n\nNote:\n- Doesn't work for Harmony: its 3pool isn't in the main registry, and Harmony is lacking a crypto registry\n- Doesn't work for Moonbeam: it's lacking a main registry\n",
+          "request": {
+            "name": "Returns information on all pools, in a specific registry, on a specific chain.\n\nNote:\n- Doesn't work for Harmony: its 3pool isn't in the main registry, and Harmony is lacking a crypto registry\n- Doesn't work for Moonbeam: it's lacking a main registry\n",
+            "description": {
+              "content": "Returns information on all pools, in a specific registry, on a specific chain.\n\nNote:\n- Doesn't work for Harmony: its 3pool isn't in the main registry, and Harmony is lacking a crypto registry\n- Doesn't work for Moonbeam: it's lacking a main registry\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                ":blockchainId",
+                ":registryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "registryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f44ef6db-6dea-4b15-8147-7a908d671054",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    ":blockchainId",
+                    ":registryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "registryId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2a47367f-b848-4f21-876a-0099c3e24190",
+          "name": "Returns all pools, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all pools, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all pools, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "all",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0f808eb5-bad4-4d3a-a40e-876e9c484ee4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "all",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "339fe759-ffc0-4a2d-8c7c-6851c2f86508",
+          "name": "Returns all pools, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all pools, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all pools, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90cd2924-ad0c-404e-8b3a-52e2cefacae4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3a7fb11e-cad1-4c42-bccb-e4cd327c3048",
+          "name": "Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "big",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8227efdf-a6ed-432f-9f88-fb07ca01c550",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "big",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ae01effd-4aa0-4586-8895-50908ff3e21b",
+          "name": "Returns all pools whose TVL is ≥$10k, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is ≥$10k, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is ≥$10k, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "big"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "87ba9c6d-492e-41c4-927d-813bdbf368af",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "big"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "668243e8-201a-44ac-893b-1d721c590798",
+          "name": "Returns all pools whose TVL is $0, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is $0, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is $0, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "empty",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "facdcf85-623d-4f5a-9091-e418a8041088",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "empty",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c05fe13-ab6f-4082-b26d-dc5f17302e99",
+          "name": "Returns all pools whose TVL is $0, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is $0, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is $0, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "empty"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e98f0df5-b149-4185-bd22-481e66f6fe99",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "empty"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a6d542d-11c1-4890-acc5-3a904c5f86c5",
+          "name": "Returns all pools whose TVL is <$10k, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is <$10k, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is <$10k, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "small",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "18b66f1f-2650-4886-a42b-1f2a9664e43f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "small",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "edeab291-742a-4735-b321-de944756618b",
+          "name": "Returns all pools whose TVL is <$10k, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all pools whose TVL is <$10k, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all pools whose TVL is <$10k, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPools",
+                "small"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d51f69d0-affb-41fb-8588-bef33e1eef1d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPools",
+                    "small"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0673dc3b-d3d2-4f51-8f09-ee1efe905bfc",
+      "name": "Lending",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9b8b9aa2-65d0-42cc-9f6f-0e484c34051c",
+          "name": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+          "request": {
+            "name": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+            "description": {
+              "content": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                ":lendingBlockchainId",
+                ":lendingRegistryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingBlockchainId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingRegistryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1519c0d1-c4f2-434b-a11b-1007523bd2ec",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    ":lendingBlockchainId",
+                    ":lendingRegistryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingBlockchainId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingRegistryId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5225b748-7571-4bbc-a3a8-d2ff82d02721",
+          "name": "Returns all lending vaults, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all lending vaults, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all lending vaults, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                "all",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingBlockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1116f12b-5a39-4c89-8a69-b6696d7f50df",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    "all",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingBlockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c7dd4e2-6053-4698-8e63-09e37d06f4a3",
+          "name": "Returns all lending vaults, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all lending vaults, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all lending vaults, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "44eabb41-85e1-4514-b19f-2ff0259aee52",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "27f05216-6477-46ba-b575-1f59c09b0e7c",
+      "name": "Tokens",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8082ad92-b1c9-4cd6-81a4-8376eff2a4bd",
+          "name": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+          "request": {
+            "name": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+            "description": {
+              "content": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getTokens",
+                "all",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae8c2231-8e51-46bd-8536-a498731414fd",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getTokens",
+                    "all",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.curve.finance/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e70c2655-c312-4cf3-8b24-a29defa60179",
+    "name": "Curve.finance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.\n\nContact Support:\n Name: Curve Finance",
+      "type": "text/plain"
+    }
+  }
+}
