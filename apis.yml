@@ -2,7 +2,7 @@ aid: curve-finance
 url: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml
 name: Curve Finance
 kind: protocol
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Web3
 - DeFi
@@ -30,7 +30,7 @@ apis:
   - Lending
   - crvUSD
   - Governance
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.curve.finance/api
   humanURL: https://docs.curve.finance/curve-api/curve-api/
   description: Public read-only REST API used by the Curve UI and third parties. Endpoints
@@ -59,7 +59,7 @@ apis:
   - On-chain
   - Vyper
   - Pools
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://etherscan.io/address/curve.fi
   humanURL: https://docs.curve.finance/
   description: Curve's primary surface for swaps and liquidity is a set of audited
