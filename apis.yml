@@ -87,7 +87,7 @@ common:
   url: https://docs.curve.finance/
 - type: GitHub
   url: https://github.com/curvefi
-- type: Forum
+- type: Forums
   url: https://gov.curve.finance/
 - type: Plans
   url: plans/curve-finance-plans-pricing.yml
@@ -95,7 +95,7 @@ common:
   url: rate-limits/curve-finance-rate-limits.yml
 - type: FinOps
   url: finops/curve-finance-finops.yml
-- type: LLMsTxt
+- type: LlmsText
   url: https://docs.curve.finance/llms.txt
 maintainers:
 - FN: Kin Lane
