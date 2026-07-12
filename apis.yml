@@ -81,6 +81,10 @@ apis:
   - Liquidity provisioning
   - Governance voting
 common:
+- type: VulnerabilityDisclosure
+  url: security/curve-finance-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/curve-finance-domain-security.yml
 - type: Portal
   url: https://curve.fi/
 - type: Documentation
@@ -97,6 +101,8 @@ common:
   url: finops/curve-finance-finops.yml
 - type: LlmsText
   url: https://docs.curve.finance/llms.txt
+- url: https://news.curve.finance/rss/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
