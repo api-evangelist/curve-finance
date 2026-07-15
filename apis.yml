@@ -81,6 +81,8 @@ apis:
   - Liquidity provisioning
   - Governance voting
 common:
+- type: AgenticAccess
+  url: agentic-access/curve-finance-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/curve-finance-vulnerability-disclosure.yml
 - type: DomainSecurity
