@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: crvUSD
+paths:
+  /getCrvCircSupply:
+    get:
+      tags:
+      - crvUSD
+      description: Returns the circulating supply of crvUSD
+      responses:
+        '200':
+          description: null
+  /getCrvusdTotalSupply:
+    get:
+      tags:
+      - crvUSD
+      description: Returns the total supply of crvUSD
+      responses:
+        '200':
+          description: null
+  /getCrvusdTotalSupplyNumber:
+    get:
+      tags:
+      - crvUSD
+      description: Returns the total supply of crvUSD as a number
+      responses:
+        '200':
+          description: null
+  /getScrvusdTotalSupplyNumber:
+    get:
+      tags:
+      - crvUSD
+      description: Returns the total supply of scrvUSD as a number
+      responses:
+        '200':
+          description: null
+  /getScrvusdTotalSupplyResult:
+    get:
+      tags:
+      - crvUSD
+      description: Returns the total supply of scrvUSD as a JSON object
+      responses:
+        '200':
+          description: null
+  /getVolumes/ethereum/crvusd-amms:
+    get:
+      tags:
+      - crvUSD
+      description: 'Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)
+
+        '
+      responses:
+        '200':
+          description: null

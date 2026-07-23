@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Tokens API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Tokens
+paths:
+  /getTokens/all/{blockchainId}:
+    get:
+      tags:
+      - Tokens
+      description: 'Returns all tokens that can be found in Curve pools, on a specific chain.
+
+        Pools need at least $10k TVL for tokens to make this list.
+
+
+        Note that tokens’ `usdPrice` is very simply the usd price of that token reported
+
+        by the largest Curve pool on that chain, at that one point in time. There is no effort
+
+        made to average or smooth out those prices, they should be used for presentation purposes only.
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: ''
+components:
+  parameters:
+    blockchainId:
+      in: path
+      name: blockchainId
+      required: true
+      schema:
+        type: string
+        enum:
+        - ethereum
+        - arbitrum
+        - aurora
+        - avalanche
+        - base
+        - bsc
+        - celo
+        - fantom
+        - fraxtal
+        - harmony
+        - hyperliquid
+        - kava
+        - mantle
+        - moonbeam
+        - optimism
+        - polygon
+        - sonic
+        - x-layer
+        - xdai
+        - zkevm
+        - zksync

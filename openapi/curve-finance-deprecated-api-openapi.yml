@@ -1,0 +1,181 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Deprecated API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Deprecated
+paths:
+  /getETHprice:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: Returns the current Ethereum USD price
+      responses:
+        '200':
+          description: null
+  /getFactoGauges/{blockchainId}:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: '<i>Deprecated: please use `getAllGauges` instead</i>
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getFactoryCryptoPools/{blockchainId}:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: '<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getFactoryPools:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: 'Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now
+
+        <i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>
+
+        '
+      responses:
+        '200':
+          description: null
+  /getFactoryTVL:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: '<i>Deprecated: please use `getPools/ethereum/factory` instead</i>
+
+        '
+      responses:
+        '200':
+          description: null
+  /getFactoryV2Pools/{blockchainId}:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: '<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getMainPoolsAPYs/{blockchainId}:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: 'Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).
+
+        Data returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.
+
+        If the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.
+
+
+        Note: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.
+
+        '
+      parameters:
+      - in: path
+        name: blockchainId
+        required: true
+        schema:
+          type: string
+          enum: []
+      responses:
+        '200':
+          description: null
+  /getMainPoolsGaugeRewards:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: 'Returns Ethereum main registry pools gauge rewards
+
+        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
+
+        '
+      responses:
+        '200':
+          description: null
+  /getMainRegistryPools:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: 'Returns Ethereum main registry pools addresses as an array
+
+        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
+
+        '
+      responses:
+        '200':
+          description: null
+  /getMainRegistryPoolsAndLpTokens:
+    get:
+      deprecated: true
+      tags:
+      - Deprecated
+      description: 'Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools
+
+        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
+
+        '
+      responses:
+        '200':
+          description: null
+components:
+  parameters:
+    blockchainId:
+      in: path
+      name: blockchainId
+      required: true
+      schema:
+        type: string
+        enum:
+        - ethereum
+        - arbitrum
+        - aurora
+        - avalanche
+        - base
+        - bsc
+        - celo
+        - fantom
+        - fraxtal
+        - harmony
+        - hyperliquid
+        - kava
+        - mantle
+        - moonbeam
+        - optimism
+        - polygon
+        - sonic
+        - x-layer
+        - xdai
+        - zkevm
+        - zksync

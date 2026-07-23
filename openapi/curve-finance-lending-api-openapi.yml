@@ -1,0 +1,72 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Lending API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Lending
+paths:
+  /getLendingVaults/{lendingBlockchainId}/{lendingRegistryId}:
+    get:
+      tags:
+      - Lending
+      description: 'Returns information on all lending vaults, in a specific registry, on a specific chain.
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/lendingBlockchainId'
+      - $ref: '#/components/parameters/lendingRegistryId'
+      responses:
+        '200':
+          description: null
+  /getLendingVaults/all/{blockchainId}:
+    get:
+      tags:
+      - Lending
+      description: 'Returns all lending vaults, in all registries, on a specific chain.
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/lendingBlockchainId'
+      responses:
+        '200':
+          description: null
+  /getLendingVaults/all:
+    get:
+      tags:
+      - Lending
+      description: 'Returns all lending vaults, in all registries, on all chains.
+
+        '
+      responses:
+        '200':
+          description: null
+components:
+  parameters:
+    lendingRegistryId:
+      in: path
+      name: lendingRegistryId
+      required: true
+      schema:
+        type: string
+        enum:
+        - oneway
+    lendingBlockchainId:
+      in: path
+      name: lendingBlockchainId
+      required: true
+      schema:
+        type: string
+        enum:
+        - ethereum
+        - arbitrum
+        - optimism
+        - fraxtal
+        - sonic

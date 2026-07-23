@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Gauges API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Gauges
+paths:
+  /getAllGauges:
+    get:
+      tags:
+      - Gauges
+      description: 'Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.
+
+        The only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both "main" (non-factory) and factory gauges exist.
+
+        '
+      responses:
+        '200':
+          description: null

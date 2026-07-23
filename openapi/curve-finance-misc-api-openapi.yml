@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Misc API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Misc
+paths:
+  /getGas:
+    get:
+      tags:
+      - Misc
+      description: Returns Ethereum gas prices (in gwei) (uses Blocknative API)
+      responses:
+        '200':
+          description: null
+  /getPlatforms:
+    get:
+      tags:
+      - Misc
+      description: 'Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.
+
+        Useful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)
+
+        '
+      responses:
+        '200':
+          description: null
+  /getPointsCampaigns:
+    get:
+      tags:
+      - Misc
+      description: 'Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)
+
+        '
+      responses:
+        '200':
+          description: null
+  /getRegistryAddress:
+    get:
+      tags:
+      - Misc
+      description: 'Returns address of the Ethereum registry
+
+        See <https://curve.readthedocs.io/registry-registry.html#registry>
+
+        '
+      responses:
+        '200':
+          description: null
+  /getWeeklyFees:
+    get:
+      tags:
+      - Misc
+      description: Returns weekly fees
+      responses:
+        '200':
+          description: null

@@ -1,0 +1,168 @@
+openapi: 3.1.0
+info:
+  title: Curve.finance crvUSD Volumes and APYs API
+  version: 1.0.0
+  description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
+  contact:
+    name: Curve Finance
+    url: https://curve.finance
+  license:
+    name: MIT
+servers:
+- url: https://api.curve.finance/v1
+tags:
+- name: Volumes and APYs
+paths:
+  /getAllGauges:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.
+
+        The only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both "main" (non-factory) and factory gauges exist.
+
+        '
+      responses:
+        '200':
+          description: null
+  /getAllPoolsVolume/{blockchainId}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: Returns total 24h volume for a chain.
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getBaseApys/{blockchainId}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns all base APY data for Curve pools on each chain.
+
+
+        Note: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getFactoGaugesCrvRewards/{blockchainId}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: Returns unboosted CRV APRs for sidechain facto gauges
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getFactoryAPYs/{blockchainId}/{version}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).
+
+        Data returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.
+
+        If the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.
+
+        '
+      parameters:
+      - in: path
+        name: blockchainId
+        required: true
+        schema:
+          type: string
+          enum:
+          - bsc
+          - kava
+          - zkevm
+          - zksync
+          - x-layer
+          - mantle
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          enum:
+          - stable
+          - crypto
+      responses:
+        '200':
+          description: null
+  /getSubgraphData/{blockchainId}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns all 24h volume and base APY data for Curve pools on each chain.
+
+        It relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getVolumes/{blockchainId}:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns all 24h volume and base APY data for Curve pools on each chain.
+
+        It relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.
+
+
+        Note: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`
+
+        '
+      parameters:
+      - $ref: '#/components/parameters/blockchainId'
+      responses:
+        '200':
+          description: null
+  /getVolumes/ethereum/crvusd-amms:
+    get:
+      tags:
+      - Volumes and APYs
+      description: 'Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)
+
+        '
+      responses:
+        '200':
+          description: null
+components:
+  parameters:
+    blockchainId:
+      in: path
+      name: blockchainId
+      required: true
+      schema:
+        type: string
+        enum:
+        - ethereum
+        - arbitrum
+        - aurora
+        - avalanche
+        - base
+        - bsc
+        - celo
+        - fantom
+        - fraxtal
+        - harmony
+        - hyperliquid
+        - kava
+        - mantle
+        - moonbeam
+        - optimism
+        - polygon
+        - sonic
+        - x-layer
+        - xdai
+        - zkevm
+        - zksync
