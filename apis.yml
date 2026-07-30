@@ -2,7 +2,19 @@ aid: curve-finance
 url: https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml
 name: Curve Finance
 kind: protocol
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/curve-finance.png
 tags:
 - Web3
 - DeFi
@@ -33,10 +45,10 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.curve.finance/api
   humanURL: https://docs.curve.finance/curve-api/curve-api/
-  description: Public read-only REST API used by the Curve UI and third parties. Endpoints
-    cover /getPools/all, /getSubgraphData, /getFactoryAPYs, /getLendingVaults, /getCrvUsdData,
-    and similar. JSON output. No authentication or rate limiting at the documented
-    level.
+  description: >-
+    Public read-only REST API used by the Curve UI and third parties. Endpoints cover /getPools/all, /getSubgraphData,
+    /getFactoryAPYs, /getLendingVaults, /getCrvUsdData, and similar. JSON output. No authentication or
+    rate limiting at the documented level.
   properties:
   - type: Documentation
     url: https://docs.curve.finance/curve-api/curve-api/
@@ -62,9 +74,10 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://etherscan.io/address/curve.fi
   humanURL: https://docs.curve.finance/
-  description: Curve's primary surface for swaps and liquidity is a set of audited
-    Vyper smart contracts deployed across multiple chains (StableSwap and CryptoSwap
-    pools, factories, gauges, voting escrow, crvUSD, lending markets).
+  description: >-
+    Curve's primary surface for swaps and liquidity is a set of audited Vyper smart contracts deployed
+    across multiple chains (StableSwap and CryptoSwap pools, factories, gauges, voting escrow, crvUSD,
+    lending markets).
   properties:
   - type: Documentation
     url: https://docs.curve.finance/
@@ -80,6 +93,86 @@ apis:
   - On-chain swap execution
   - Liquidity provisioning
   - Governance voting
+- aid: curve-finance:curve-finance-crvusd-api
+  name: Curve Finance crvUSD API
+  description: The crvUSD API from Curve Finance — 6 operation(s) for crvusd.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - crvUSD
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-crvusd-api-openapi.yml
+- aid: curve-finance:curve-finance-deprecated-api
+  name: Curve Finance Deprecated API
+  description: The Deprecated API from Curve Finance — 10 operation(s) for deprecated.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Deprecated
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-deprecated-api-openapi.yml
+- aid: curve-finance:curve-finance-gauges-api
+  name: Curve Finance Gauges API
+  description: The Gauges API from Curve Finance — 1 operation(s) for gauges.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Gauges
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-gauges-api-openapi.yml
+- aid: curve-finance:curve-finance-lending-api
+  name: Curve Finance Lending API
+  description: The Lending API from Curve Finance — 3 operation(s) for lending.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Lending
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-lending-api-openapi.yml
+- aid: curve-finance:curve-finance-misc-api
+  name: Curve Finance Misc API
+  description: The Misc API from Curve Finance — 5 operation(s) for misc.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Misc
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-misc-api-openapi.yml
+- aid: curve-finance:curve-finance-pools-api
+  name: Curve Finance Pools API
+  description: The Pools API from Curve Finance — 11 operation(s) for pools.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Pools
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-pools-api-openapi.yml
+- aid: curve-finance:curve-finance-tokens-api
+  name: Curve Finance Tokens API
+  description: The Tokens API from Curve Finance — 1 operation(s) for tokens.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Tokens
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-tokens-api-openapi.yml
+- aid: curve-finance:curve-finance-volumes-and-apys-api
+  name: Curve Finance Volumes and APYs API
+  description: The Volumes and APYs API from Curve Finance — 8 operation(s) for volumes and apys.
+  humanURL: https://docs.curve.finance/curve-api/curve-api/
+  baseURL: https://api.curve.finance/api
+  tags:
+  - Volumes and APYs
+  properties:
+  - type: OpenAPI
+    url: openapi/curve-finance-volumes-and-apys-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/curve-finance-agentic-access.yml
