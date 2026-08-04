@@ -1,0 +1,28 @@
+{
+  "provider": "curve-finance",
+  "sources": [
+    "curve-finance-crvusd-api-openapi.yml",
+    "curve-finance-deprecated-api-openapi.yml",
+    "curve-finance-gauges-api-openapi.yml",
+    "curve-finance-lending-api-openapi.yml",
+    "curve-finance-misc-api-openapi.yml",
+    "curve-finance-pools-api-openapi.yml",
+    "curve-finance-tokens-api-openapi.yml",
+    "curve-finance-volumes-and-apys-api-openapi.yml"
+  ],
+  "outputs": [
+    "curve-finance-crvusd-api-openapi.yml",
+    "curve-finance-deprecated-api-openapi.yml",
+    "curve-finance-gauges-api-openapi.yml",
+    "curve-finance-lending-api-openapi.yml",
+    "curve-finance-misc-api-openapi.yml",
+    "curve-finance-pools-api-openapi.yml",
+    "curve-finance-tokens-api-openapi.yml",
+    "curve-finance-volumes-and-apys-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
