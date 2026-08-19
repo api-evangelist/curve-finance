@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Lending API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lending",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getLendingVaults/{lendingBlockchainId}/{lendingRegistryId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/:lendingBlockchainId/:lendingRegistryId",
+            "params": [
+              {
+                "name": "lendingBlockchainId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "lendingRegistryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getLendingVaults/all/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/all/:blockchainId",
+            "params": [
+              {
+                "name": "lendingBlockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all lending vaults, in all registries, on a specific chain.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getLendingVaults/all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getLendingVaults/all"
+          },
+          "docs": "Returns all lending vaults, in all registries, on all chains.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

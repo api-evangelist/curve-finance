@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Gauges API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Gauges",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getAllGauges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getAllGauges"
+          },
+          "docs": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

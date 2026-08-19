@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "crvUSD",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getCrvCircSupply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvCircSupply"
+          },
+          "docs": "Returns the circulating supply of crvUSD"
+        },
+        {
+          "info": {
+            "name": "GET /getCrvusdTotalSupply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvusdTotalSupply"
+          },
+          "docs": "Returns the total supply of crvUSD"
+        },
+        {
+          "info": {
+            "name": "GET /getCrvusdTotalSupplyNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getCrvusdTotalSupplyNumber"
+          },
+          "docs": "Returns the total supply of crvUSD as a number"
+        },
+        {
+          "info": {
+            "name": "GET /getScrvusdTotalSupplyNumber",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getScrvusdTotalSupplyNumber"
+          },
+          "docs": "Returns the total supply of scrvUSD as a number"
+        },
+        {
+          "info": {
+            "name": "GET /getScrvusdTotalSupplyResult",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getScrvusdTotalSupplyResult"
+          },
+          "docs": "Returns the total supply of scrvUSD as a JSON object"
+        },
+        {
+          "info": {
+            "name": "GET /getVolumes/ethereum/crvusd-amms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getVolumes/ethereum/crvusd-amms"
+          },
+          "docs": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

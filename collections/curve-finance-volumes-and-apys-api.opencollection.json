@@ -1,0 +1,153 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Volumes and APYs API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Volumes and APYs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getAllGauges",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getAllGauges"
+          },
+          "docs": "Returns all Curve gauges, on all chains, in all registries. If any Curve pool, anywhere, has a gauge, then it’ll be returned by this endpoint.\nThe only exception are sidechain non-factory gauges, which aren’t indexed by any registry, and have been discontinued for a long time now. On sidechains, only factory gauges exist; on Ethereum, both \"main\" (non-factory) and factory gauges exist.\n"
+        },
+        {
+          "info": {
+            "name": "GET /getAllPoolsVolume/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getAllPoolsVolume/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns total 24h volume for a chain."
+        },
+        {
+          "info": {
+            "name": "GET /getBaseApys/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getBaseApys/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all base APY data for Curve pools on each chain.\n\nNote: [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) is preferred\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoGaugesCrvRewards/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoGaugesCrvRewards/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns unboosted CRV APRs for sidechain facto gauges"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryAPYs/{blockchainId}/{version}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryAPYs/:blockchainId/:version",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns *inaccurate* volume and base APY data for Curve pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.fi/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf the chain for wh"
+        },
+        {
+          "info": {
+            "name": "GET /getSubgraphData/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getSubgraphData/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on [Curve subgraphs](https://github.com/curvefi/volume-subgraphs), and is being slowly transitioned to the more reliable [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) endpoint (where support for more chains is being added). When this transition is done, this endpoint will however remain available as simple proxy for [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_).\n"
+        },
+        {
+          "info": {
+            "name": "GET /getVolumes/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getVolumes/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all 24h volume and base APY data for Curve pools on each chain.\nIt relies on the [Curve Prices API](https://prices.curve.finance/feeds-docs), and is meant as a more reliable replacement to the [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_) endpoints.\n\nNote: Not all chains are currently available on the Curve Prices API. Currently available chains: `ethereum | polygon | arbitrum | base | optimism | fantom`\n"
+        },
+        {
+          "info": {
+            "name": "GET /getVolumes/ethereum/crvusd-amms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getVolumes/ethereum/crvusd-amms"
+          },
+          "docs": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,259 @@
+{
+  "item": [
+    {
+      "id": "3d6f4dd2-b650-4916-9d39-5865fe01e5c3",
+      "name": "Lending",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5dbe478d-4ee8-4054-9084-fe7b4d5f7cf8",
+          "name": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+          "request": {
+            "name": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+            "description": {
+              "content": "Returns information on all lending vaults, in a specific registry, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                ":lendingBlockchainId",
+                ":lendingRegistryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingBlockchainId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingRegistryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bf4997e4-8380-4412-bc65-2c381c3caecb",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    ":lendingBlockchainId",
+                    ":lendingRegistryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingBlockchainId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingRegistryId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f9001f7c-7ee6-481a-8b0b-4c91454f1d02",
+          "name": "Returns all lending vaults, in all registries, on a specific chain.\n",
+          "request": {
+            "name": "Returns all lending vaults, in all registries, on a specific chain.\n",
+            "description": {
+              "content": "Returns all lending vaults, in all registries, on a specific chain.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                "all",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "lendingBlockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6bb3b068-6df6-4747-adae-be925b52da00",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    "all",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "lendingBlockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9a2e935-0837-41b9-9810-d2e15771f952",
+          "name": "Returns all lending vaults, in all registries, on all chains.\n",
+          "request": {
+            "name": "Returns all lending vaults, in all registries, on all chains.\n",
+            "description": {
+              "content": "Returns all lending vaults, in all registries, on all chains.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getLendingVaults",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "46221e12-6f53-4866-ad6b-49a238677846",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getLendingVaults",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.curve.finance/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "33f40069-d617-44c0-81bc-d76488e54110",
+    "name": "Curve.finance crvUSD Lending API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.\n\nContact Support:\n Name: Curve Finance",
+      "type": "text/plain"
+    }
+  }
+}

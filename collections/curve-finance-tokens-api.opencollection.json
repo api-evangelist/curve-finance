@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Tokens API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tokens",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getTokens/all/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getTokens/all/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,73 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Misc API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Misc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getGas",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getGas"
+          },
+          "docs": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)"
+        },
+        {
+          "info": {
+            "name": "GET /getPlatforms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPlatforms"
+          },
+          "docs": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n"
+        },
+        {
+          "info": {
+            "name": "GET /getPointsCampaigns",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getPointsCampaigns"
+          },
+          "docs": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n"
+        },
+        {
+          "info": {
+            "name": "GET /getRegistryAddress",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getRegistryAddress"
+          },
+          "docs": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getWeeklyFees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getWeeklyFees"
+          },
+          "docs": "Returns weekly fees"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

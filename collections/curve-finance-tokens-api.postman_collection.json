@@ -1,0 +1,109 @@
+{
+  "item": [
+    {
+      "id": "3c05b96d-7d4b-460d-a6ff-5b068fc3e83e",
+      "name": "Tokens",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5d809e75-7fd7-4fe2-96f0-01ad7394d125",
+          "name": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+          "request": {
+            "name": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+            "description": {
+              "content": "Returns all tokens that can be found in Curve pools, on a specific chain.\nPools need at least $10k TVL for tokens to make this list.\n\nNote that tokens’ `usdPrice` is very simply the usd price of that token reported\nby the largest Curve pool on that chain, at that one point in time. There is no effort\nmade to average or smooth out those prices, they should be used for presentation purposes only.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getTokens",
+                "all",
+                ":blockchainId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "blockchainId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "383f16a4-04da-46fd-bb05-56f078aaca55",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getTokens",
+                    "all",
+                    ":blockchainId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "blockchainId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.curve.finance/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "74056d4d-cd66-4eb0-89b7-1b9c64a9ac23",
+    "name": "Curve.finance crvUSD Tokens API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.\n\nContact Support:\n Name: Curve Finance",
+      "type": "text/plain"
+    }
+  }
+}

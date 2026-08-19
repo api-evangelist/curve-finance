@@ -1,0 +1,156 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Curve.finance crvUSD Deprecated API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Deprecated",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /getETHprice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getETHprice"
+          },
+          "docs": "Returns the current Ethereum USD price"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoGauges/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoGauges/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getAllGauges` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryCryptoPools/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryCryptoPools/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryPools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryPools"
+          },
+          "docs": "Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now\n<i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryTVL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryTVL"
+          },
+          "docs": "<i>Deprecated: please use `getPools/ethereum/factory` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getFactoryV2Pools/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getFactoryV2Pools/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainPoolsAPYs/{blockchainId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainPoolsAPYs/:blockchainId",
+            "params": [
+              {
+                "name": "blockchainId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).\nData returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.\nIf t"
+        },
+        {
+          "info": {
+            "name": "GET /getMainPoolsGaugeRewards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainPoolsGaugeRewards"
+          },
+          "docs": "Returns Ethereum main registry pools gauge rewards\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainRegistryPools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainRegistryPools"
+          },
+          "docs": "Returns Ethereum main registry pools addresses as an array\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        },
+        {
+          "info": {
+            "name": "GET /getMainRegistryPoolsAndLpTokens",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.curve.finance/v1/getMainRegistryPoolsAndLpTokens"
+          },
+          "docs": "Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools\n<i>Deprecated: please use `getPools/ethereum/main` instead</i>\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

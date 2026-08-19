@@ -1,0 +1,317 @@
+{
+  "item": [
+    {
+      "id": "40f209b8-b0e9-4287-838f-368a36a278e6",
+      "name": "Misc",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44aaee60-906b-45ae-a912-5aeace6842eb",
+          "name": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+          "request": {
+            "name": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+            "description": {
+              "content": "Returns Ethereum gas prices (in gwei) (uses Blocknative API)",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getGas"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9579175e-6ad1-4e83-9dd0-f377209e5dab",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98a2f0f0-bc5e-4438-abe0-cd14471d59fc",
+          "name": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+          "request": {
+            "name": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+            "description": {
+              "content": "Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.\nUseful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPlatforms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b52817f7-6399-4a9b-83ce-a35bc0563974",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPlatforms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5cabdf0-dcf0-4f34-899f-f58eb222a501",
+          "name": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+          "request": {
+            "name": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+            "description": {
+              "content": "Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getPointsCampaigns"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1dbd61e8-d82b-48d7-ae69-9956da105282",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getPointsCampaigns"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "24527e2e-ab4d-486d-ab0e-a20e06fddefb",
+          "name": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+          "request": {
+            "name": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+            "description": {
+              "content": "Returns address of the Ethereum registry\nSee <https://curve.readthedocs.io/registry-registry.html#registry>\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getRegistryAddress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95898d5e-37de-4304-b00f-69f62c2f2a7b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getRegistryAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ad2be3a-9ff2-4e0b-a203-3741c4ea4b12",
+          "name": "Returns weekly fees",
+          "request": {
+            "name": "Returns weekly fees",
+            "description": {
+              "content": "Returns weekly fees",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getWeeklyFees"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aabd91f2-4fc7-4664-8dd2-ee55195bffdd",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getWeeklyFees"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.curve.finance/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "17abd0a4-3947-4617-a1a2-90ea1ced6266",
+    "name": "Curve.finance crvUSD Misc API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.\n\nContact Support:\n Name: Curve Finance",
+      "type": "text/plain"
+    }
+  }
+}

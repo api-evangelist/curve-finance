@@ -1,0 +1,378 @@
+{
+  "item": [
+    {
+      "id": "3769ed27-bed5-48a6-84e8-10ecc90de8f9",
+      "name": "crvUSD",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2dbf0ca8-25e3-43b7-af79-7cb03cefdfa0",
+          "name": "Returns the circulating supply of crvUSD",
+          "request": {
+            "name": "Returns the circulating supply of crvUSD",
+            "description": {
+              "content": "Returns the circulating supply of crvUSD",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvCircSupply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4fc5541f-ec91-4e49-879b-31d69bf924db",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvCircSupply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d1829d98-58d0-4c22-b1b0-716b3a609bf0",
+          "name": "Returns the total supply of crvUSD",
+          "request": {
+            "name": "Returns the total supply of crvUSD",
+            "description": {
+              "content": "Returns the total supply of crvUSD",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvusdTotalSupply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef92ca04-3317-4140-8f60-f2d2d6a2e5dd",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvusdTotalSupply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f54518a5-04dd-4f67-96c7-ab0a0246754c",
+          "name": "Returns the total supply of crvUSD as a number",
+          "request": {
+            "name": "Returns the total supply of crvUSD as a number",
+            "description": {
+              "content": "Returns the total supply of crvUSD as a number",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getCrvusdTotalSupplyNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4f659665-aa20-40b3-bf69-5dfe9c367b8d",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getCrvusdTotalSupplyNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a37a595-1988-4026-8424-50be7dca0c7e",
+          "name": "Returns the total supply of scrvUSD as a number",
+          "request": {
+            "name": "Returns the total supply of scrvUSD as a number",
+            "description": {
+              "content": "Returns the total supply of scrvUSD as a number",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getScrvusdTotalSupplyNumber"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "919d3cad-884a-4352-a595-2762eef02bc7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getScrvusdTotalSupplyNumber"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "46a2d3c8-2349-42c8-9c49-c26543f04dc2",
+          "name": "Returns the total supply of scrvUSD as a JSON object",
+          "request": {
+            "name": "Returns the total supply of scrvUSD as a JSON object",
+            "description": {
+              "content": "Returns the total supply of scrvUSD as a JSON object",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getScrvusdTotalSupplyResult"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f1c6b468-1093-4010-a62a-2ef40aeec173",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getScrvusdTotalSupplyResult"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fec36792-8110-4e1b-8ce6-f3aa9764a7c2",
+          "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+          "request": {
+            "name": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+            "description": {
+              "content": "Returns last daily volume for each [crvUSD AMM](https://docs.curve.fi/crvUSD/amm/)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "getVolumes",
+                "ethereum",
+                "crvusd-amms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6650b15f-5ad3-4642-bd6d-a92647b4bbb4",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "getVolumes",
+                    "ethereum",
+                    "crvusd-amms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.curve.finance/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e1f7d740-e819-4dae-b696-4b47e5a9f033",
+    "name": "Curve.finance crvUSD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.\n\nContact Support:\n Name: Curve Finance",
+      "type": "text/plain"
+    }
+  }
+}
