@@ -26,7 +26,7 @@ tags:
 - Open Source
 created: '2026-05-08'
 modified: '2026-05-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: Curve Finance is a DeFi automated market maker (AMM) optimized for low-slippage
   swaps among stablecoins and pegged assets across multiple chains. Curve maintains
   a public read-only REST API at api.curve.finance providing pool, gauge, factory,
