@@ -22,6 +22,15 @@ tags:
 - AMM
 - Stablecoins
 - Pegged Assets
+- Multi-Chain
+- Open-Source
+tags_raw:
+- Web3
+- DeFi
+- DEX
+- AMM
+- Stablecoins
+- Pegged Assets
 - Multi-chain
 - Open Source
 created: '2026-05-08'
@@ -67,6 +76,11 @@ apis:
 - aid: curve-finance:smart-contracts
   name: Curve Smart Contracts
   tags:
+  - Smart Contracts
+  - Onchain
+  - Vyper
+  - Pools
+  tags_raw:
   - Smart Contracts
   - On-chain
   - Vyper
@@ -138,7 +152,8 @@ apis:
   description: The Misc API from Curve Finance — 5 operation(s) for misc.
   humanURL: https://docs.curve.finance/curve-api/curve-api/
   baseURL: https://api.curve.finance/api
-  tags:
+  tags: []
+  tags_raw:
   - Misc
   properties:
   - type: OpenAPI
