@@ -34,7 +34,7 @@ tags:
 - AMM
 - Stablecoins
 - Pegged Assets
-- Multi-chain
+- Multi-Chain
 - Open-Source
 tags_raw:
 - Web3
@@ -89,7 +89,7 @@ apis:
   name: Curve Smart Contracts
   tags:
   - Smart Contracts
-  - On-chain
+  - Onchain
   - Vyper
   - Pools
   tags_raw:
