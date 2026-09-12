@@ -201,6 +201,8 @@ apis:
   - type: OpenAPI
     url: openapi/curve-finance-volumes-and-apys-api-openapi.yml
 common:
+- type: Website
+  url: https://www.curve.finance/
 - type: AgenticAccess
   url: agentic-access/curve-finance-agentic-access.yml
 - type: VulnerabilityDisclosure
