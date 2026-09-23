@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Curve.finance crvUSD Lending API
+  title: Curve.finance Lending API
   version: 1.0.0
   description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
   contact:
@@ -17,37 +17,43 @@ paths:
     get:
       tags:
       - Lending
-      description: 'Returns information on all lending vaults, in a specific registry, on a specific chain.
-
-        '
+      description: Returns information on all lending vaults, in a specific registry, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/lendingBlockchainId'
       - $ref: '#/components/parameters/lendingRegistryId'
       responses:
         '200':
           description: null
+      summary: Get get lending vaults by lending blockchain id by lending registry id
+      x-summary-source: derived
+      operationId: getGetLendingVaultsByLendingBlockchainIdByLendingRegistryId
+      x-operation-id-source: derived
   /getLendingVaults/all/{blockchainId}:
     get:
       tags:
       - Lending
-      description: 'Returns all lending vaults, in all registries, on a specific chain.
-
-        '
+      description: Returns all lending vaults, in all registries, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/lendingBlockchainId'
       responses:
         '200':
           description: null
+      summary: Get get lending vaults all by blockchain id
+      x-summary-source: derived
+      operationId: getGetLendingVaultsAllByBlockchainId
+      x-operation-id-source: derived
   /getLendingVaults/all:
     get:
       tags:
       - Lending
-      description: 'Returns all lending vaults, in all registries, on all chains.
-
-        '
+      description: Returns all lending vaults, in all registries, on all chains.
       responses:
         '200':
           description: null
+      summary: Get get lending vaults all
+      x-summary-source: derived
+      operationId: getGetLendingVaultsAll
+      x-operation-id-source: derived
 components:
   parameters:
     lendingRegistryId:

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Curve.finance crvUSD Pools API
+  title: Curve.finance Pools API
   version: 1.0.0
   description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
   contact:
@@ -21,6 +21,10 @@ paths:
       responses:
         '200':
           description: null
+      summary: Get get hidden pools
+      x-summary-source: derived
+      operationId: getGetHiddenPools
+      x-operation-id-source: derived
   /getPoolList/{blockchainId}:
     get:
       tags:
@@ -28,14 +32,16 @@ paths:
       description: 'Returns addresses of all pools, in all registries, on a specific chain.
 
 
-        Note: For backward compatibility, in this endpoint the "factory" registry is renamed to "stable-factory"
-
-        '
+        Note: For backward compatibility, in this endpoint the "factory" registry is renamed to "stable-factory"'
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get pool list by blockchain id
+      x-summary-source: derived
+      operationId: getGetPoolListByBlockchainId
+      x-operation-id-source: derived
   /getPools/{blockchainId}/{registryId}:
     get:
       tags:
@@ -47,103 +53,121 @@ paths:
 
         - Doesn''t work for Harmony: its 3pool isn''t in the main registry, and Harmony is lacking a crypto registry
 
-        - Doesn''t work for Moonbeam: it''s lacking a main registry
-
-        '
+        - Doesn''t work for Moonbeam: it''s lacking a main registry'
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       - $ref: '#/components/parameters/registryId'
       responses:
         '200':
           description: null
+      summary: Get get pools by blockchain id by registry id
+      x-summary-source: derived
+      operationId: getGetPoolsByBlockchainIdByRegistryId
+      x-operation-id-source: derived
   /getPools/all/{blockchainId}:
     get:
       tags:
       - Pools
-      description: 'Returns all pools, in all registries, on a specific chain.
-
-        '
+      description: Returns all pools, in all registries, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get pools all by blockchain id
+      x-summary-source: derived
+      operationId: getGetPoolsAllByBlockchainId
+      x-operation-id-source: derived
   /getPools/all:
     get:
       tags:
       - Pools
-      description: 'Returns all pools, in all registries, on all chains.
-
-        '
+      description: Returns all pools, in all registries, on all chains.
       responses:
         '200':
           description: null
+      summary: Get get pools all
+      x-summary-source: derived
+      operationId: getGetPoolsAll
+      x-operation-id-source: derived
   /getPools/big/{blockchainId}:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.
-
-        '
+      description: Returns all pools whose TVL is ≥$10k, in all registries, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get pools big by blockchain id
+      x-summary-source: derived
+      operationId: getGetPoolsBigByBlockchainId
+      x-operation-id-source: derived
   /getPools/big:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is ≥$10k, in all registries, on all chains.
-
-        '
+      description: Returns all pools whose TVL is ≥$10k, in all registries, on all chains.
       responses:
         '200':
           description: null
+      summary: Get get pools big
+      x-summary-source: derived
+      operationId: getGetPoolsBig
+      x-operation-id-source: derived
   /getPools/empty/{blockchainId}:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is $0, in all registries, on a specific chain.
-
-        '
+      description: Returns all pools whose TVL is $0, in all registries, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get pools empty by blockchain id
+      x-summary-source: derived
+      operationId: getGetPoolsEmptyByBlockchainId
+      x-operation-id-source: derived
   /getPools/empty:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is $0, in all registries, on all chains.
-
-        '
+      description: Returns all pools whose TVL is $0, in all registries, on all chains.
       responses:
         '200':
           description: null
+      summary: Get get pools empty
+      x-summary-source: derived
+      operationId: getGetPoolsEmpty
+      x-operation-id-source: derived
   /getPools/small/{blockchainId}:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is <$10k, in all registries, on a specific chain.
-
-        '
+      description: Returns all pools whose TVL is <$10k, in all registries, on a specific chain.
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get pools small by blockchain id
+      x-summary-source: derived
+      operationId: getGetPoolsSmallByBlockchainId
+      x-operation-id-source: derived
   /getPools/small:
     get:
       tags:
       - Pools
-      description: 'Returns all pools whose TVL is <$10k, in all registries, on all chains.
-
-        '
+      description: Returns all pools whose TVL is <$10k, in all registries, on all chains.
       responses:
         '200':
           description: null
+      summary: Get get pools small
+      x-summary-source: derived
+      operationId: getGetPoolsSmall
+      x-operation-id-source: derived
 components:
   parameters:
     blockchainId:

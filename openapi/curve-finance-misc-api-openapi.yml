@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Curve.finance crvUSD Misc API
+  title: Curve.finance Misc API
   version: 1.0.0
   description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
   contact:
@@ -21,40 +21,50 @@ paths:
       responses:
         '200':
           description: null
+      summary: Get get gas
+      x-summary-source: derived
+      operationId: getGetGas
+      x-operation-id-source: derived
   /getPlatforms:
     get:
       tags:
       - Misc
       description: 'Returns platforms (also known as `blockchainId` in other API endpoints) that Curve is deployed on, and which pool registries are available on each platform.
 
-        Useful to then query e.g. [`/api/getPools/{blockchainId}/{registryId}`](#/default/get_getPools__blockchainId___registryId_)
-
-        '
+        Useful to then query e.g. `/api/getPools/{blockchainId}/{registryId}`'
       responses:
         '200':
           description: null
+      summary: Get get platforms
+      x-summary-source: derived
+      operationId: getGetPlatforms
+      x-operation-id-source: derived
   /getPointsCampaigns:
     get:
       tags:
       - Misc
-      description: 'Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)
-
-        '
+      description: Returns points campaigns (see https://github.com/curvefi/curve-frontend/tree/main/packages/external-rewards/src)
       responses:
         '200':
           description: null
+      summary: Get get points campaigns
+      x-summary-source: derived
+      operationId: getGetPointsCampaigns
+      x-operation-id-source: derived
   /getRegistryAddress:
     get:
       tags:
       - Misc
       description: 'Returns address of the Ethereum registry
 
-        See <https://curve.readthedocs.io/registry-registry.html#registry>
-
-        '
+        See'
       responses:
         '200':
           description: null
+      summary: Get get registry address
+      x-summary-source: derived
+      operationId: getGetRegistryAddress
+      x-operation-id-source: derived
   /getWeeklyFees:
     get:
       tags:
@@ -63,3 +73,7 @@ paths:
       responses:
         '200':
           description: null
+      summary: Get get weekly fees
+      x-summary-source: derived
+      operationId: getGetWeeklyFees
+      x-operation-id-source: derived

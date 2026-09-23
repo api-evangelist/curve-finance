@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Curve.finance crvUSD Deprecated API
+  title: Curve.finance Deprecated API
   version: 1.0.0
   description: Curve.finance public REST API for pools, gauges, volumes, APY/APR, lending vaults, fees, and CRV/crvUSD supply data across supported blockchains.
   contact:
@@ -22,32 +22,40 @@ paths:
       responses:
         '200':
           description: null
+      summary: Get get et hprice
+      x-summary-source: derived
+      operationId: getGetETHprice
+      x-operation-id-source: derived
   /getFactoGauges/{blockchainId}:
     get:
       deprecated: true
       tags:
       - Deprecated
-      description: '<i>Deprecated: please use `getAllGauges` instead</i>
-
-        '
+      description: 'Deprecated: please use `getAllGauges` instead'
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get facto gauges by blockchain id
+      x-summary-source: derived
+      operationId: getGetFactoGaugesByBlockchainId
+      x-operation-id-source: derived
   /getFactoryCryptoPools/{blockchainId}:
     get:
       deprecated: true
       tags:
       - Deprecated
-      description: '<i>Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead</i>
-
-        '
+      description: 'Deprecated: please use `getPools/{blockchainId}/factory-crypto` instead'
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get factory crypto pools by blockchain id
+      x-summary-source: derived
+      operationId: getGetFactoryCryptoPoolsByBlockchainId
+      x-operation-id-source: derived
   /getFactoryPools:
     get:
       deprecated: true
@@ -55,51 +63,55 @@ paths:
       - Deprecated
       description: 'Returns pools in Curve’s legacy Ethereum factory, which has been superseded for years now
 
-        <i>Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`</i>
-
-        '
+        Legacy: in most situations, you’ll want to focus on newer pools with `getPools/all/ethereum`'
       responses:
         '200':
           description: null
+      summary: Get get factory pools
+      x-summary-source: derived
+      operationId: getGetFactoryPools
+      x-operation-id-source: derived
   /getFactoryTVL:
     get:
       deprecated: true
       tags:
       - Deprecated
-      description: '<i>Deprecated: please use `getPools/ethereum/factory` instead</i>
-
-        '
+      description: 'Deprecated: please use `getPools/ethereum/factory` instead'
       responses:
         '200':
           description: null
+      summary: Get get factory tvl
+      x-summary-source: derived
+      operationId: getGetFactoryTVL
+      x-operation-id-source: derived
   /getFactoryV2Pools/{blockchainId}:
     get:
       deprecated: true
       tags:
       - Deprecated
-      description: '<i>Deprecated: please use `getPools/{blockchainId}/factory` instead</i>
-
-        '
+      description: 'Deprecated: please use `getPools/{blockchainId}/factory` instead'
       parameters:
       - $ref: '#/components/parameters/blockchainId'
       responses:
         '200':
           description: null
+      summary: Get get factory v2 pools by blockchain id
+      x-summary-source: derived
+      operationId: getGetFactoryV2PoolsByBlockchainId
+      x-operation-id-source: derived
   /getMainPoolsAPYs/{blockchainId}:
     get:
       deprecated: true
       tags:
       - Deprecated
-      description: 'Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the [Curve Prices API](https://prices.curve.finance/feeds-docs) or the [Curve subgraphs](https://github.com/curvefi/volume-subgraphs).
+      description: 'Returns *inaccurate* volume and base APY data for `main` registry pools on chains that aren’t indexed by either the Curve Prices API or the Curve subgraphs.
 
         Data returned by this endpoint is necessarily inaccurate due to the manual chain-walking involved, coupled with the limitations of RPC endpoints available for this subset of chains. Using this endpoint should be considered an imperfect last resort.
 
-        If the chain for which you want to retrieve volume and base APY data is available through either [`/getVolumes/{blockchainId}`](#/default/get_getVolumes__blockchainId_) or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.
+        If the chain for which you want to retrieve volume and base APY data is available through either `/getVolumes/{blockchainId}` or [`getSubgraphData/[blockchainId]`](#/default/get_getSubgraphData__blockchainId_), please use these.
 
 
-        Note: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.
-
-        '
+        Note: At the moment, all chains with a `main` registry have support in one of the endpoints mentioned above. This endpoint will not return data for any chain anymore.'
       parameters:
       - in: path
         name: blockchainId
@@ -110,6 +122,10 @@ paths:
       responses:
         '200':
           description: null
+      summary: Get get main pools apys by blockchain id
+      x-summary-source: derived
+      operationId: getGetMainPoolsAPYsByBlockchainId
+      x-operation-id-source: derived
   /getMainPoolsGaugeRewards:
     get:
       deprecated: true
@@ -117,12 +133,14 @@ paths:
       - Deprecated
       description: 'Returns Ethereum main registry pools gauge rewards
 
-        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
-
-        '
+        Deprecated: please use `getPools/ethereum/main` instead'
       responses:
         '200':
           description: null
+      summary: Get get main pools gauge rewards
+      x-summary-source: derived
+      operationId: getGetMainPoolsGaugeRewards
+      x-operation-id-source: derived
   /getMainRegistryPools:
     get:
       deprecated: true
@@ -130,12 +148,14 @@ paths:
       - Deprecated
       description: 'Returns Ethereum main registry pools addresses as an array
 
-        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
-
-        '
+        Deprecated: please use `getPools/ethereum/main` instead'
       responses:
         '200':
           description: null
+      summary: Get get main registry pools
+      x-summary-source: derived
+      operationId: getGetMainRegistryPools
+      x-operation-id-source: derived
   /getMainRegistryPoolsAndLpTokens:
     get:
       deprecated: true
@@ -143,12 +163,14 @@ paths:
       - Deprecated
       description: 'Returns an array of shape `{ address, lpTokenAddress }` for Ethereum main registry pools
 
-        <i>Deprecated: please use `getPools/ethereum/main` instead</i>
-
-        '
+        Deprecated: please use `getPools/ethereum/main` instead'
       responses:
         '200':
           description: null
+      summary: Get get main registry pools and lp tokens
+      x-summary-source: derived
+      operationId: getGetMainRegistryPoolsAndLpTokens
+      x-operation-id-source: derived
 components:
   parameters:
     blockchainId:

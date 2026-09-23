@@ -1,28 +1,42 @@
 {
   "provider": "curve-finance",
   "sources": [
-    "curve-finance-crvusd-api-openapi.yml",
-    "curve-finance-deprecated-api-openapi.yml",
-    "curve-finance-gauges-api-openapi.yml",
-    "curve-finance-lending-api-openapi.yml",
-    "curve-finance-misc-api-openapi.yml",
-    "curve-finance-pools-api-openapi.yml",
-    "curve-finance-tokens-api-openapi.yml",
-    "curve-finance-volumes-and-apys-api-openapi.yml"
+    "_original/curve-finance-openapi.yml"
   ],
   "outputs": [
-    "curve-finance-crvusd-api-openapi.yml",
     "curve-finance-deprecated-api-openapi.yml",
     "curve-finance-gauges-api-openapi.yml",
     "curve-finance-lending-api-openapi.yml",
     "curve-finance-misc-api-openapi.yml",
     "curve-finance-pools-api-openapi.yml",
     "curve-finance-tokens-api-openapi.yml",
-    "curve-finance-volumes-and-apys-api-openapi.yml"
+    "curve-finance-volumes-and-apys-api-openapi.yml",
+    "curve-finance-crvusd-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "curve-finance-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "curve-finance-openapi.yml: declared missing tag: Deprecated",
+    "curve-finance-openapi.yml: declared missing tag: Gauges",
+    "curve-finance-openapi.yml: declared missing tag: Lending",
+    "curve-finance-openapi.yml: declared missing tag: Misc",
+    "curve-finance-openapi.yml: declared missing tag: Pools",
+    "curve-finance-openapi.yml: declared missing tag: Tokens",
+    "curve-finance-openapi.yml: declared missing tag: Volumes and APYs",
+    "curve-finance-openapi.yml: declared missing tag: crvUSD",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "curve-finance-crvusd-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-deprecated-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-gauges-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-lending-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-misc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-pools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-tokens-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "curve-finance-volumes-and-apys-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
