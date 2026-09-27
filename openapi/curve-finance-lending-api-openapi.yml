@@ -56,14 +56,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    lendingRegistryId:
-      in: path
-      name: lendingRegistryId
-      required: true
-      schema:
-        type: string
-        enum:
-        - oneway
     lendingBlockchainId:
       in: path
       name: lendingBlockchainId
@@ -76,3 +68,11 @@ components:
         - optimism
         - fraxtal
         - sonic
+    lendingRegistryId:
+      in: path
+      name: lendingRegistryId
+      required: true
+      schema:
+        type: string
+        enum:
+        - oneway

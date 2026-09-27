@@ -170,6 +170,22 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
+    registryId:
+      in: path
+      name: registryId
+      required: true
+      schema:
+        type: string
+        enum:
+        - factory
+        - main
+        - crypto
+        - factory-crypto
+        - factory-crvusd
+        - factory-twocrypto
+        - factory-tricrypto
+        - factory-eywa
+        - factory-stable-ng
     blockchainId:
       in: path
       name: blockchainId
@@ -198,19 +214,3 @@ components:
         - xdai
         - zkevm
         - zksync
-    registryId:
-      in: path
-      name: registryId
-      required: true
-      schema:
-        type: string
-        enum:
-        - factory
-        - main
-        - crypto
-        - factory-crypto
-        - factory-crvusd
-        - factory-twocrypto
-        - factory-tricrypto
-        - factory-eywa
-        - factory-stable-ng

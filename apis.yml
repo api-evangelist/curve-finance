@@ -4,15 +4,20 @@ name: Curve Finance
 kind: protocol
 deliveryModel:
   model: saas
-  open_source: false
+  license_evidence:
+    not_product:
+    - curvefi/curve-api
+    - curvefi/curve-contract
+  open_source: unknown
   commercial: true
   callable_host: true
   label: Hosted service · you call their endpoint
-  confidence: high
+  confidence: low
   source:
   - openapi
   - pricing
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -27,6 +32,9 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/curve-finance.png
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-25
 tags:
 - Web3
 - DeFi
@@ -35,7 +43,7 @@ tags:
 - Stablecoins
 - Pegged Assets
 - Multi-Chain
-- Open-Source
+- Open Source
 tags_raw:
 - Web3
 - DeFi
@@ -45,6 +53,7 @@ tags_raw:
 - Pegged Assets
 - Multi-chain
 - Open Source
+- Open-Source
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.23'
@@ -120,7 +129,7 @@ apis:
   - Liquidity provisioning
   - Governance voting
 - aid: curve-finance:curve-finance-crvusd-api
-  name: Curve Finance crvUSD API
+  name: Curve Finance Crv USD API
   description: The crvUSD API from Curve Finance — 6 operation(s) for crvusd.
   humanURL: https://docs.curve.finance/curve-api/curve-api/
   baseURL: https://api.curve.finance/api
