@@ -95,7 +95,7 @@ paths:
       responses:
         '200':
           description: null
-      summary: Get get factory v2 pools by blockchain id
+      summary: Get get factory v2pools by blockchain id
       x-summary-source: derived
       operationId: getGetFactoryV2PoolsByBlockchainId
       x-operation-id-source: derived
