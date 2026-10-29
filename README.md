@@ -1,4 +1,4 @@
-# Curve Finance (curve-finance)
+# Curve Finance
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,137 @@
 
 Curve Finance is a DeFi automated market maker (AMM) optimized for low-slippage swaps among stablecoins and pegged assets across multiple chains. Curve maintains a public read-only REST API at api.curve.finance providing pool, gauge, factory, governance, lending, crvUSD, and TVL data. Smart-contract entry points are the primary write path; the REST API is for indexing and analytics.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/curve-finance/refs/heads/main/apis.yml)
+**Areas:** Web3 · DeFi · Decentralized Exchange · AMM · Stablecoins · Pegged Assets · Multi-Chain · Open Source
 
-## Tags
+## Curve Finance on APIs.io
 
-- Web3
-- DeFi
-- DEX
-- AMM
-- Stablecoins
-- Pegged Assets
-- Multi-chain
-- Open Source
+Everything profiled for Curve Finance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/curve-finance/](https://apis.io/providers/curve-finance/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (10)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Curve REST API](https://apis.io/apis/curve-finance/rest-api/) — Public read-only REST API used by the Curve UI and third parties. Endpoints cover /getPools/all, /getSubgraphData, /getFactoryAPYs, /getLendingVaults,…
+- [Curve Smart Contracts](https://apis.io/apis/curve-finance/smart-contracts/) — Curve's primary surface for swaps and liquidity is a set of audited Vyper smart contracts deployed across multiple chains (StableSwap and CryptoSwap pools,…
+- [Curve Finance Crv USD API](https://apis.io/apis/curve-finance/curve-finance-crvusd-api/) — The crvUSD API from Curve Finance — 6 operation(s) for crvusd.
+- [Curve Finance Deprecated API](https://apis.io/apis/curve-finance/curve-finance-deprecated-api/) — The Deprecated API from Curve Finance — 10 operation(s) for deprecated.
+- [Curve Finance Gauges API](https://apis.io/apis/curve-finance/curve-finance-gauges-api/) — The Gauges API from Curve Finance — 1 operation(s) for gauges.
+- [Curve Finance Lending API](https://apis.io/apis/curve-finance/curve-finance-lending-api/) — The Lending API from Curve Finance — 3 operation(s) for lending.
+- [Curve Finance Misc API](https://apis.io/apis/curve-finance/curve-finance-misc-api/) — The Misc API from Curve Finance — 5 operation(s) for misc.
+- [Curve Finance Pools API](https://apis.io/apis/curve-finance/curve-finance-pools-api/) — The Pools API from Curve Finance — 11 operation(s) for pools.
+- [Curve Finance Tokens API](https://apis.io/apis/curve-finance/curve-finance-tokens-api/) — The Tokens API from Curve Finance — 1 operation(s) for tokens.
+- [Curve Finance Volumes and APYs API](https://apis.io/apis/curve-finance/curve-finance-volumes-and-apys-api/) — The Volumes and APYs API from Curve Finance — 8 operation(s) for volumes and apys.
 
-## APIs
+### Published properties
 
-### Curve REST API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Public read-only REST API used by the Curve UI and third parties. Endpoints cover /getPools/all, /getSubgraphData, /getFactoryAPYs, /getLendingVaults, /getCrvUsdData, and similar. JSON output. No authentication or rate limiting at the documented level.
+#### GraphQL (1)
 
-- **Human URL:** [https://docs.curve.finance/curve-api/curve-api/](https://docs.curve.finance/curve-api/curve-api/)
-- **Base URL:** `https://api.curve.finance/api`
+GraphQL schemas.
 
-#### Tags
+- [Curve Finance GraphQL](https://apis.io/graphqls/curve-finance/curve-finance-graphql/)
 
-- Pools
-- Gauges
-- TVL
-- Lending
-- crvUSD
-- Governance
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.curve.finance/curve-api/curve-api/)
-- [Git Hub](https://github.com/curvefi/curve-api)
-- [Postman Collection](collections/curve-finance.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/curve-finance.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Curve Finance Agentic Access](https://apis.io/agentic-access/curve-finance/curve-finance-agentic-access/)
 
-### Curve Smart Contracts
+#### Collections (9)
 
-Curve's primary surface for swaps and liquidity is a set of audited Vyper smart contracts deployed across multiple chains (StableSwap and CryptoSwap pools, factories, gauges, voting escrow, crvUSD, lending markets).
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://docs.curve.finance/](https://docs.curve.finance/)
-- **Base URL:** `https://etherscan.io/address/curve.fi`
+- [Curve.finance API](https://apis.io/collections/curve-finance/open-curve-finance/)
+- [Curve.finance crvUSD API](https://apis.io/collections/curve-finance/open-curve-finance-crvusd-api/)
+- [Curve.finance crvUSD Deprecated API](https://apis.io/collections/curve-finance/open-curve-finance-deprecated-api/)
+- [Curve.finance crvUSD Gauges API](https://apis.io/collections/curve-finance/open-curve-finance-gauges-api/)
+- [Curve.finance crvUSD Lending API](https://apis.io/collections/curve-finance/open-curve-finance-lending-api/)
+- [Curve.finance crvUSD Misc API](https://apis.io/collections/curve-finance/open-curve-finance-misc-api/)
+- [Curve.finance crvUSD Pools API](https://apis.io/collections/curve-finance/open-curve-finance-pools-api/)
+- [Curve.finance crvUSD Tokens API](https://apis.io/collections/curve-finance/open-curve-finance-tokens-api/)
+- [Curve.finance crvUSD Volumes and APYs API](https://apis.io/collections/curve-finance/open-curve-finance-volumes-and-apys-api/)
 
-#### Tags
+#### Security (2)
 
-- Smart Contracts
-- On-chain
-- Vyper
-- Pools
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Curve Finance Domain Security](https://apis.io/security/curve-finance/curve-finance-domain-security/)
+- [Curve Finance Vulnerability Disclosure](https://apis.io/security/curve-finance/curve-finance-vulnerability-disclosure/)
 
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Curve Finance Plans Pricing](https://apis.io/plans/curve-finance/curve-finance-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Curve Finance Rate Limits](https://apis.io/rate-limits/curve-finance/curve-finance-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Curve Finance Finops](https://apis.io/finops/curve-finance/curve-finance-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.curve.finance/)
 - [Documentation](https://docs.curve.finance/)
-- [Git Hub](https://github.com/curvefi/curve-contract)
-- [Postman Collection](collections/curve-finance.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/curve-finance.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Blog](https://news.curve.finance/rss/)
 
-## Common Properties
+## API Evangelist rating
 
-- [Portal](https://curve.fi/)
-- [Documentation](https://docs.curve.finance/)
-- [Git Hub](https://github.com/curvefi)
-- [Forum](https://gov.curve.finance/)
-- [Plans](plans/curve-finance-plans-pricing.yml)
-- [Rate Limits](rate-limits/curve-finance-rate-limits.yml)
-- [Fin Ops](finops/curve-finance-finops.yml)
-- [L L Ms Txt](https://docs.curve.finance/llms.txt)
+**Kin Score 26.5** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 48.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 5.3 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/curve-finance/](https://apis.io/providers/curve-finance/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Curve Finance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/curve-finance/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
